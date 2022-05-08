@@ -1,5 +1,5 @@
 # trijam-168
-Source code for Ashley's TriJam #168 entry.  The theme is "Don't hurt nobody."
+Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
 
 [Trijam](https://itch.io/jam/trijam-168) is a weekly game jam where the goal is to create a game in under 3 hours of development time.
 
