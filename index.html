@@ -16,7 +16,7 @@
         </header>
         <main>
             <!-- Start Game State -->
-            <section id="start-state"  class="state">
+            <section id="start-state"  class="state hidden">
                 <img id="pinata" src="assets/images/pinata.png" />
                 <img id="personA" src="assets/images/personA.png" />
                 <img id="personB" src="assets/images/personB.png" />
@@ -24,19 +24,19 @@
                 <p>You're up! We'll put a blind fold on you and spin you around. <span>Watch out for bystanders!</span> Press any key to begin the game!</p>
             </section>
             <!-- Play State Phase 1 -->
-            <section id="play-state-1"  class="state hidden">
+            <section id="play-state-1"  class="state ">
                 <div  class="blind-fold">
                     <div class="dial-gauge"></div>
-                    <div class="dial-gauge-indicator"></div>
+                    <div id="dial-gauge-indicator"></div>
                     <p>Spin! Spin! Spin a round. Press any key to stop.</p>
                 </div>
             </section>
             <!-- Play State Phase 2 -->
             <section id="play-state-2"  class="state hidden">
                 <div  class="blind-fold">
-                    <div class="bar-gauge"></div>
-                    <div class="bar-gauge-indicator"></div>
-                    <p>Reorient yourself to get in front of the pi&#0241ata</p>
+                    <div id="bar-gauge"></div>
+                    <div id="bar-gauge-indicator"></div>
+                    <p>Move left or right to reorient yourself to get in front of the pi&#0241ata</p>
                 </div>
             </section>
             <!-- Win End Game State -->
@@ -49,7 +49,7 @@
             <!-- Lose End Game State -->
             <section id="lose-state" class="state hidden">
                 <img id="knocked-out" src="assets/images/knocked_out.png" />
-                <p>Yikes! Better luck next time!  Press any key to restart the game.</p>
+                <p>Yikes! <span>You hit a bystander!</span> Better luck next time!  Press any key to restart the game.</p>
             </section>
         </main>
         <footer>

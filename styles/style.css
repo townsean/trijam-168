@@ -118,6 +118,7 @@ main > section {
     top: 60%;
 }
 
+#lose-state > p > span,
 #start-state > p > span {
     color: red;
 }
@@ -126,9 +127,12 @@ main > section {
     top: 10%;
 }
 
-
 #win-state {
     position: relative;
+}
+
+#lose-state > p {
+    top: 70%;
 }
 
 #stick {
@@ -153,17 +157,19 @@ main > section {
     border-radius: 50%;
     width: 50vh;
     height: 50vh;
-    background: radial-gradient(circle, green 10%, transparent 10%, transparent 35%, orange 35%, orange);
+    background: 
+        radial-gradient(circle, green 10%, transparent 10%, transparent 35%, orange 35%, orange 95%, transparent 95%),
+        conic-gradient(from -25deg, red 15%, transparent 15%);
 }
 
-.bar-gauge-indicator,
-.dial-gauge-indicator {
+#bar-gauge-indicator,
+#dial-gauge-indicator {
     background: green;
     width: 10px;
     border-radius: 5px;
 }
 
-.dial-gauge-indicator {
+#dial-gauge-indicator {
     position: absolute;
     background: green;
     height: 25vh;
@@ -176,17 +182,24 @@ main > section {
     transform-origin: 0 100%;
 }
 
-.bar-gauge {
-    background: orange;
+#bar-gauge {
+    background: 
+        linear-gradient(90deg, orange 45%, red 45%, red 55%, orange 55%);
     width: 50%;
     height: 10%;
     border-radius: 5px;
 }
 
-.bar-gauge-indicator {
+#bar-gauge-indicator {
     z-index: 1;
     height: 15%;
     position: absolute;
+    animation-name: slide;
+    animation-timing-function: linear;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transform-origin: 100% 100%;
 }
 
 .candy {
@@ -211,6 +224,10 @@ main > section {
 
 .hidden {
     display: none;
+}
+
+.stop-animation {
+  animation-play-state: paused;
 }
 
 @keyframes shake {
@@ -250,5 +267,15 @@ main > section {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-25vw);
+    }
+
+    to {
+        transform: translateX(25vw);
     }
 }

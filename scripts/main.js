@@ -1,7 +1,7 @@
 function goToState(stateName) {
     const states = document.getElementsByClassName("state");
-    currentState = stateName;
-    
+    _currentState = stateName;
+
     for(let state of states) {
         if(state.id == stateName) {
             state.classList.remove("hidden");
@@ -11,16 +11,79 @@ function goToState(stateName) {
     }
 }
 
+function playState1() {
+    const indicator = document.getElementById("dial-gauge-indicator");
+    const indicatorTransform = window.getComputedStyle(indicator).getPropertyValue('transform');
+
+    _rotation = getRotationAngleFromMatrix(indicatorTransform);
+
+    indicator.classList.add("stop-animation");
+    setTimeout(() => {
+        goToState("play-state-2");
+        indicator.classList.remove("stop-animation");
+      }, "2000");
+}
+
+function playState2() {
+    let isPinataHit = false;
+    const barGauge = document.getElementById('bar-gauge');
+    const indicator = document.getElementById('bar-gauge-indicator');
+    const indicatorTransform = window.getComputedStyle(indicator).getPropertyValue('transform');
+    
+    const matrix = new DOMMatrixReadOnly(indicatorTransform)
+    const translateX = matrix.m41;
+    const width = barGauge.offsetWidth;
+
+    _rotationCorrection = (translateX / (width / 2)) * 180;
+
+    let angle = _rotation + _rotationCorrection;
+    console.log(angle, _rotation, _rotationCorrection);
+    if (angle >= -25 && angle <= 25) {
+        isPinataHit = true;
+    }
+
+
+    indicator.classList.add("stop-animation");
+    setTimeout(() => {
+        if(isPinataHit) {
+            goToState("win-state");
+        } else {
+            goToState("lose-state");
+        }
+
+        indicator.classList.remove("stop-animation");
+      }, "1500");
+
+    
+}
+
+/**
+ * Code copied and modified from https://css-tricks.com/get-value-of-css-rotation-through-javascript/
+ * @param {*} matrix 
+ */
+function getRotationAngleFromMatrix(matrix) {
+    let values = matrix.split('(')[1];
+    values = values.split(')')[0];
+    values = values.split(',');
+
+    let a = values[0];
+    let b = values[1];
+
+    let angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+
+    return angle;
+}
+
 function checkState(state) {
     switch(state) {
         case 'start-state':
             goToState("play-state-1");
             break;
         case 'play-state-1':
-            goToState("play-state-2");
+            playState1()
             break;
         case 'play-state-2':
-            goToState("win-state");
+            playState2()
             break;
         case 'win-state':
         case 'lose-state':
@@ -33,14 +96,16 @@ function checkState(state) {
 
 function main() {
     document.addEventListener('keypress', () => {
-        checkState(currentState);
+        checkState(_currentState);
     })
 
     document.addEventListener('click', () => {
-        checkState(currentState);
+        checkState(_currentState);
     })
 }
 
-let currentState = "start-state"
+let _currentState = "start-state"
+let _rotation;
+let _rotationCorrection;
 
 main();

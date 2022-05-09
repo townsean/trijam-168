@@ -14,6 +14,8 @@ Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
 ## Useful Resources
 
 * [Two animations on same element not working](https://stackoverflow.com/questions/20584954/two-animations-on-same-element-not-working) (Can't animate same property twice :facepalm:)
+* [How to get value of transform in JavaScript](https://stackoverflow.com/a/42267490)
+* [Get value of CSS rotation through JavaScript](https://css-tricks.com/get-value-of-css-rotation-through-javascript/)
 
 ## Project Setup
 
