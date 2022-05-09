@@ -1,7 +1,9 @@
 # trijam-168
-Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
+Source code for [Ashley's Trijam #168 entry](https://thecodingcouple.itch.io/swingin-pinata).  The theme is "Don't hurt nobody."
 
-[Trijam](https://itch.io/jam/trijam-168) is a weekly game jam where the goal is to create a game in under 3 hours of development time.
+[Trijam](https://itch.io/jam/trijam-168) is a weekly game jam where the goal is to create a game in under 3 hours of development time. Didn't quite make the 3 hour deadline, fortunately, the game jam allows for overtime.  
+
+Total Dev + Asset Creation Time: ~5 hours.
 
 ## Synopsis
 
