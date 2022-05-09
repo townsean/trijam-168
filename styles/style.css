@@ -1,0 +1,254 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ultra', serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    background: linear-gradient(dodgerblue, lightblue 20%, mediumseagreen 20%, green);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer,
+header {
+    padding: 15px;
+}
+
+footer {
+    text-align: right;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active,
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 50%);
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 500px;
+    z-index: 2;
+    margin-left: 10px;
+    font-size: 1.25rem;
+    align-self: flex-start;
+}
+ 
+header {
+    font-size: 2rem;
+    box-shadow: 0 0 15px black;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+main > section {
+    height: 100%;
+}
+
+#personA,
+#personB,
+#pinata,
+#stick {
+    position: absolute;
+}
+
+#pinata {
+    top: -8px;
+    width: 20%;
+    left: 40%;
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+
+#personA {
+    width: 10%;
+    left: 20%;
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#personB {
+    width: 12%;
+    left: 65%;
+    animation-name: jump-reverse;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#broken-pinata {
+    height: 65vh;
+}
+
+#broken-pinata,
+#knocked-out {
+    width: 100%;
+    max-height: calc(100vh - 125px); /* height of footer and header */
+}
+
+#start-state > p {
+    top: 60%;
+}
+
+#start-state > p > span {
+    color: red;
+}
+
+#win-state > p {
+    top: 10%;
+}
+
+
+#win-state {
+    position: relative;
+}
+
+#stick {
+    width: 40%;
+    left: 35%;
+    bottom: -48.5px; /* height of footer */
+}
+
+.blind-fold {
+    background-color: black;
+    height: 95%;
+    margin-top: auto;
+    box-shadow: 0 0 15px black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dial-gauge {
+    position: absolute;
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    background: radial-gradient(circle, green 10%, transparent 10%, transparent 35%, orange 35%, orange);
+}
+
+.bar-gauge-indicator,
+.dial-gauge-indicator {
+    background: green;
+    width: 10px;
+    border-radius: 5px;
+}
+
+.dial-gauge-indicator {
+    position: absolute;
+    background: green;
+    height: 25vh;
+    margin-bottom: 25vh;
+    z-index: 1;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+    transform-origin: 0 100%;
+}
+
+.bar-gauge {
+    background: orange;
+    width: 50%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+.bar-gauge-indicator {
+    z-index: 1;
+    height: 15%;
+    position: absolute;
+}
+
+.candy {
+    position: absolute;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#candy-a {
+    left: 25%;
+    top: 50%;
+    height: 50%;
+}
+
+#candy-b {
+    width: 25%;
+    left: 50%;
+    top: 65%;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes jump-reverse {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

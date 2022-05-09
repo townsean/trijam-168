@@ -5,12 +5,56 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Swingin' Pi&#0241ata | Trijam #168</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
         <link href="styles/style.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            Swingin' Pi&#0241ata | Trijam #168
+            <a href="https://github.com/townsean/trijam-168">Swingin' Pi&#0241ata | Trijam #168</a>
         </header>
+        <main>
+            <!-- Start Game State -->
+            <section id="start-state"  class="state">
+                <img id="pinata" src="assets/images/pinata.png" />
+                <img id="personA" src="assets/images/personA.png" />
+                <img id="personB" src="assets/images/personB.png" />
+                <img id="stick" src="assets/images/stick.png" />
+                <p>You're up! We'll put a blind fold on you and spin you around. <span>Watch out for bystanders!</span> Press any key to begin the game!</p>
+            </section>
+            <!-- Play State Phase 1 -->
+            <section id="play-state-1"  class="state hidden">
+                <div  class="blind-fold">
+                    <div class="dial-gauge"></div>
+                    <div class="dial-gauge-indicator"></div>
+                    <p>Spin! Spin! Spin a round. Press any key to stop.</p>
+                </div>
+            </section>
+            <!-- Play State Phase 2 -->
+            <section id="play-state-2"  class="state hidden">
+                <div  class="blind-fold">
+                    <div class="bar-gauge"></div>
+                    <div class="bar-gauge-indicator"></div>
+                    <p>Reorient yourself to get in front of the pi&#0241ata</p>
+                </div>
+            </section>
+            <!-- Win End Game State -->
+            <section id="win-state" class="state hidden">
+                <img id="broken-pinata" src="assets/images/broken_pinata.png" />
+                <img id="candy-a" class="candy" src="assets/images/candyA.png" />
+                <img id="candy-b" class="candy" src="assets/images/candyB.png" />
+                <p>Hooray! Candy for dayz! Press any key to restart the game.</p>
+            </section>
+            <!-- Lose End Game State -->
+            <section id="lose-state" class="state hidden">
+                <img id="knocked-out" src="assets/images/knocked_out.png" />
+                <p>Yikes! Better luck next time!  Press any key to restart the game.</p>
+            </section>
+        </main>
+        <footer>
+            A game by Ashley
+        </footer>
         <script src="scripts/main.js"></script>
     </body>
 </html>
