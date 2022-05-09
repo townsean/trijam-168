@@ -13,7 +13,7 @@ The second key press determins the correction angle to reorient the player in fr
 
 Watch out for bystanders! If the player is unable to reorient within a small margin of error, they'll miss the pi&#0241;ata and hit a bystander, losing the game. 
 
-![Swingin Pinata Gameplay](swingin_pinata.gif)
+![Swingin Pinata Gameplay](assets/images/swingin_pinata.gif)
 
 ## Built With
 
