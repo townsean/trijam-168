@@ -5,6 +5,16 @@ Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
 
 ## Synopsis
 
+Swingin' Pi&#0241;ata is a reaction style game. Players are up for their turn to swing at a pi&#0241;ata. 
+
+The first press determines the angle at which the player has been rotated during the spin phase.
+
+The second key press determins the correction angle to reorient the player in front of the pi&#0241;ata. 
+
+Watch out for bystanders! If the player is unable to reorient within a small margin of error, they'll miss the pi&#0241;ata and hit a bystander, losing the game. 
+
+![Swingin Pinata Gameplay](swingin_pinata.gif)
+
 ## Built With
 
 * Vanilla JS

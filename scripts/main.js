@@ -37,8 +37,7 @@ function playState2() {
     _rotationCorrection = (translateX / (width / 2)) * 180;
 
     let angle = _rotation + _rotationCorrection;
-    console.log(angle, _rotation, _rotationCorrection);
-    if (angle >= -25 && angle <= 25) {
+    if (angle >= -20 && angle <= 20) {
         isPinataHit = true;
     }
 
