@@ -7,7 +7,7 @@ Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
 
 Swingin' Pi&#0241;ata is a reaction style game. Players are up for their turn to swing at a pi&#0241;ata. 
 
-The first press determines the angle at which the player has been rotated during the spin phase.
+The first key press determines the angle at which the player has been rotated during the spin phase.
 
 The second key press determins the correction angle to reorient the player in front of the pi&#0241;ata. 
 
