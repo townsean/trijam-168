@@ -18,8 +18,11 @@ Watch out for bystanders! If the player is unable to reorient within a small mar
 ## Built With
 
 * Vanilla JS
+* Visual Studio Code
 
 ## Third Party Assets
+
+* [Ultra Google Font](https://fonts.google.com/specimen/Ultra)
 
 ## Useful Resources
 
