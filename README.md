@@ -23,6 +23,9 @@ Watch out for bystanders! If the player is unable to reorient within a small mar
 ## Third Party Assets
 
 * [Ultra Google Font](https://fonts.google.com/specimen/Ultra)
+* Mega FX Pack (Catapult_launch_5.wav)
+* Cute Game Sounds (Cute_Game_Musical_SFX_Orchestral_Cute_Accomplishment_01.wav)
+* Thinkroot Records - 8-bit Brave Adventure (Kara Square - 8-Bit Side-Scrolling Action.wav)
 
 ## Useful Resources
 
@@ -34,8 +37,14 @@ Watch out for bystanders! If the player is unable to reorient within a small mar
 
 Run with local web server
 
-```
+```bash
 python -m http.server 8000
+```
+
+or
+
+```bash
+python3 -m http.server 8000
 ```
 
 ## Maintainers

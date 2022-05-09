@@ -44,16 +44,24 @@ function playState2() {
 
     indicator.classList.add("stop-animation");
     setTimeout(() => {
+        playSound("assets/sounds/swing.wav");
+
         if(isPinataHit) {
             goToState("win-state");
+            playSound("assets/sounds/win.wav");
         } else {
             goToState("lose-state");
         }
 
         indicator.classList.remove("stop-animation");
       }, "1500");
+}
 
-    
+function playSound(url, loop = false) {
+    const audio = new Audio();
+    audio.src = url;
+    audio.loop = loop;
+    audio.play();
 }
 
 /**
@@ -76,6 +84,11 @@ function getRotationAngleFromMatrix(matrix) {
 function checkState(state) {
     switch(state) {
         case 'start-state':
+            if(!_isBackgroundMusicPlaying) {
+                _isBackgroundMusicPlaying = true;
+                playSound("assets/sounds/music.wav", true);
+            }
+
             goToState("play-state-1");
             break;
         case 'play-state-1':
@@ -106,5 +119,6 @@ function main() {
 let _currentState = "start-state"
 let _rotation;
 let _rotationCorrection;
+let _isBackgroundMusicPlaying = false;
 
 main();
