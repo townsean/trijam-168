@@ -1,7 +1,9 @@
 # trijam-168
-Source code for Ashley's Trijam #168 entry.  The theme is "Don't hurt nobody."
+Source code for [Ashley's Trijam #168 entry](https://thecodingcouple.itch.io/swingin-pinata).  The theme is "Don't hurt nobody."
 
-[Trijam](https://itch.io/jam/trijam-168) is a weekly game jam where the goal is to create a game in under 3 hours of development time.
+[Trijam](https://itch.io/jam/trijam-168) is a weekly game jam where the goal is to create a game in under 3 hours of development time. Didn't quite make the 3 hour deadline, fortunately, the game jam allows for overtime.  
+
+Total Dev + Asset Creation Time: ~5 hours.
 
 ## Synopsis
 
@@ -27,6 +29,9 @@ Swingin Pinata [ranked number 24 out of 45 entries](https://itch.io/jam/trijam-1
 ## Third Party Assets
 
 * [Ultra Google Font](https://fonts.google.com/specimen/Ultra)
+* Mega FX Pack (Catapult_launch_5.wav)
+* Cute Game Sounds (Cute_Game_Musical_SFX_Orchestral_Cute_Accomplishment_01.wav)
+* Thinkroot Records - 8-bit Brave Adventure (Kara Square - 8-Bit Side-Scrolling Action.wav)
 
 ## Useful Resources
 
@@ -38,8 +43,14 @@ Swingin Pinata [ranked number 24 out of 45 entries](https://itch.io/jam/trijam-1
 
 Run with local web server
 
-```
+```bash
 python -m http.server 8000
+```
+
+or
+
+```bash
+python3 -m http.server 8000
 ```
 
 ## Maintainers
