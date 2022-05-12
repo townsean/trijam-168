@@ -15,6 +15,10 @@ Watch out for bystanders! If the player is unable to reorient within a small mar
 
 ![Swingin Pinata Gameplay](assets/images/swingin_pinata.gif)
 
+Swingin Pinata [ranked number 24 out of 45 entries](https://itch.io/jam/trijam-168/results).
+
+<img src="assets/images/swingin_pinata_ranking.jpg" width="400">
+
 ## Built With
 
 * Vanilla JS
