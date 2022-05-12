@@ -43,6 +43,7 @@ Swingin Pinata [ranked number 24 out of 45 entries](https://itch.io/jam/trijam-1
 
 * Provide better feedback for the users. Specifially in the second play state, it would be nice to have some visual indicator of how far off the player's orientation was before trying to correct it.
 * Improved scaling on different widths and heights
+* Add debouncing to the keypress / mouse click events
 
 ## Project Setup
 
