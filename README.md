@@ -39,6 +39,11 @@ Swingin Pinata [ranked number 24 out of 45 entries](https://itch.io/jam/trijam-1
 * [How to get value of transform in JavaScript](https://stackoverflow.com/a/42267490)
 * [Get value of CSS rotation through JavaScript](https://css-tricks.com/get-value-of-css-rotation-through-javascript/)
 
+## Ideas for future improvements
+
+* Provide better feedback for the users. Specifially in the second play state, it would be nice to have some visual indicator of how far off the player's orientation was before trying to correct it.
+* Improved scaling on different widths and heights
+
 ## Project Setup
 
 Run with local web server

@@ -59,7 +59,7 @@ header {
 main {
     flex: 1;
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
 }
 
 main > section {
@@ -164,13 +164,13 @@ main > section {
 
 #bar-gauge-indicator,
 #dial-gauge-indicator {
+    position: absolute;
     background: green;
     width: 10px;
     border-radius: 5px;
 }
 
 #dial-gauge-indicator {
-    position: absolute;
     background: green;
     height: 25vh;
     margin-bottom: 25vh;
